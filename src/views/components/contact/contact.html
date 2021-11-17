@@ -1,0 +1,46 @@
+<div class="contact__container" id="contact">
+  <div class="contact__title">contact</div>
+  <div class="contact__subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis at velit maximus,
+    molestie est a, tempor magna.</div>
+  <div class="contact__content">
+    <form action="formWithValidation" class="contact__forms">
+      <div class="contact__form-block form">
+        <p>
+          <input name="Name" placeholder="Name" pattern="^[A-Z]{1}[a-z]{1,16}" maxLength="34" required
+            class="contact__input input ">
+        </p>
+        <p>
+          <input type="email" name="Email" placeholder="Email" maxLength="30" pattern="\w+@\w+\.\w+" required
+            class="contact__input input">
+        </p>
+        <p>
+          <input placeholder="Phone +38(xxx)xxx-xx-xx" type="tel" name="Phone" max="15" id="phone2"
+            class="contact__input input " pattern="[\+]\d{2}[\(][0]\d{2}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
+        </p>
+      </div>
+      <p>
+        <textarea  placeholder="Message" class="contact__message" name="message" id="contact__form-message input" cols="10" rows="10"></textarea>
+      </p>
+
+      <div class="contact__form-wrapper">
+        <div class="contact__info">
+          <i class="fas fa-map-marker-alt"> </i>5th London Boulevard, U.K.
+          <i class="fas fa-phone"> </i>
+          +40 729 131 637/+40 726 458 782
+          <i class="fas fa-envelope"> </i>office@mindblister.com
+        </div>
+        <div class="contact__butons">
+          @@include('../buttons/button.html',{
+          "tag": "button",
+          "className": "contact",
+          "2className": "validateBtn",
+          "text": "send message",
+          "href": "href=",
+          "url":"#",
+          "modifiler":"colored",
+          "3className": "text--white",
+          })
+        </div>
+      </div>
+    </form>
+  </div>

@@ -1,0 +1,56 @@
+//- Base
+@import '__reset', '__mixin', '__fonts', '__variables'
+//- Partials
+@import '../../views/partials/header/header'
+@import '../../views/partials/footer/footer'
+
+//- Components
+
+@import '../../views/components/slider/slider'
+@import '../../views/components/About us Section/About us Section'
+@import '../../views/components/booking/booking'
+@import '../../views/components/contact/contact'
+@import '../../views/components/Delicious/Delicious'
+@import '../../views/components/photo-galerie/photo-galerie'
+@import '../../views/components/Private-Events/PrivateEvents'
+@import '../../views/components/Specialties/Specialties'
+@import '../../views/components/Team/Team'
+@import '../../views/components/map/map'
+@import '../../views/components/buttons/buttons'
+@import '../../views/components/drop-menu/drop-menu'
+
+html
+  scroll-behavior: smooth
+body
+  background: $white
+  text-align: -webkit-center
+  margin: auto
+main
+  @media (min-width: 1024)
+    display: flex
+    justify-content: center
+
+  //header
+a:focus-visible
+  outline: 1px solid white
+.text
+  $parentText: &
+  &--upper
+    text-transform: uppercase
+  &--white
+    color: $white
+
+.hidden
+  visibility: hidden
+
+@media (min-width: 320px)
+  head
+    width: 320px
+
+@media (min-width: 480px)
+  head
+    width: 480px
+
+@media (min-width: 700px)
+  head
+    width: 700px

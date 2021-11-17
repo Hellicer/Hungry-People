@@ -1,0 +1,59 @@
+<div class="booking__container" id="booking">
+
+
+  <div class="booking__content-form">
+
+    <div class="booking__form">
+      <div class="booking__title text--upper">book a table</div>
+      <form action="formWithValidation" class="booking__forms">
+        <div class="booking__form-block form">
+          <p>
+            <input name="Name" placeholder="Name" pattern="^[A-Z]{1}[a-z]{1,16}" maxLength="34" required class="booking__input input ">
+
+
+          </p>
+          <p>
+            <input type="email" name="Email" placeholder="Email" maxLength="30" pattern="\w+@\w+\.\w+" required
+              class="booking__input input">
+          </p>
+        </div>
+        <div class="booking__form-block1 form">
+          <p>
+            <input placeholder="Phone +38(xxx)xxx-xx-xx" type="tel" name="Phone" max="15" id="phone" class="booking__input input "
+              pattern="[\+]\d{2}[\(][0]\d{2}[\)]\d{3}[\-]\d{2}[\-]\d{2}" required>
+          </p>
+
+          <p>
+            <input type="number" placeholder="People" min="1" max="120" step="1" id="people-count" required
+              class="booking__input input" name="People" pattern="\d+">
+          </p>
+        </div>
+        <div class="booking__form-block2 form">
+          <p>
+            <input placeholder="Date(mm/dd)" name="user"  min="2021-10-01" max="2022-12-30" required type="date" class="booking__input input"        value="2021-11-02">
+          </p>
+          <p>
+            <input placeholder="Time" name="user" required type="time" min="08:00" max="22:00"        value="13:00" class="booking__input input">
+          </p>
+        </div>
+        <div class="booking__butons">
+          @@include('../buttons/button.html',{
+          "tag": "button",
+          "className": "booking",
+          "2className": "validateBtn",
+          "text": "BOOK NOW",
+          "href": "href=",
+          "url":"#",
+          "modifiler":"colored",
+          "3className": "text--white",
+
+          })
+        </div>
+      </form>
+    </div>
+    <div class="booking__image">
+      <img src="/assets/images/book-img.png" alt="book-img" srcset="" class="booking__image-photo">
+    </div>
+  </div>
+  <div class="booking__info">Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM, Phone: +40 729 131 637/+40 726 458 782</div>
+</div>

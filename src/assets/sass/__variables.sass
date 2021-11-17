@@ -1,0 +1,67 @@
+
+$black: #000000
+$white: #FFFFFF
+$yellow: #E8C300 //- Color
+
+//- Font
+$mainFont: Banny, sans-serif
+$mainFont1: BannyBold, sans-serif
+$secFont: OpenSansBold, sans-serif
+$secFont1: OpenSans-Regular, sans-serif
+// font-size
+$lowsize: 12px
+$xlowsize: 14px
+$middlesize: 18px
+$mediumsize: 36px
+
+//- Resolution
+$large-min: 1201px
+$large-max: 1200px
+
+$middle-min: 1025px
+$middle-max: 1024px
+
+$medium-min: 769px
+$medium-max: 768px
+
+$small-min: 576px
+$small-max: 575px
+
+$extra-large: 1440px
+$extra-small: 375px
+
+@mixin option_block
+  display: flex
+
+@mixin after-plank($top, $right, $bottom, $left, $width, $height)
+  position: absolute
+  content: " "
+  background-color: $yellow
+  border-radius: 5px
+  margin: $top $right $bottom $left
+  filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5))
+  width: $width
+  height: $height
+
+@mixin after-frame($top, $right, $bottom, $left, $width, $height)
+  position: absolute
+  content: " "
+  border-radius: 5px
+  border: 20px solid $yellow
+  margin: $top $right $bottom $left
+  filter: drop-shadow(0px 0px 100px rgba(0, 0, 0, 0.5))
+  width: $width
+  height: $height
+
+@mixin fluid-ratio($large-size, $small-size)
+  $width-large: nth($large-size, 1)
+  $width-small: nth($small-size, 1)
+  $height-large: nth($large-size, 2)
+  $height-small: nth($small-size, 2)
+  $slope: ($height-large - $height-small) / ($width-large - $width-small)
+  $height: $height-small - $width-small * $slope
+  padding-top: $slope * 100%
+  height: $height
+  background-size: cover
+  -moz-background-size: cover
+  background-position: center

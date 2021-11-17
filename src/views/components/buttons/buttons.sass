@@ -1,0 +1,22 @@
+
+.btn
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 200px
+  height: 60px
+  border: solid 1px
+  border-radius: 5px
+  font-size: $lowsize
+  @media(max-width: 1024px)
+    width: 18vw
+    height: 5vw
+  @media(max-width: 768px) and (orientation: portrait)
+    width: 200px
+    height: 60px
+
+
+.btn--colored
+  border: solid
+  background: $yellow
+  border-color: $yellow

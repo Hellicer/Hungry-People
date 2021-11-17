@@ -1,0 +1,110 @@
+.contact
+  &__container
+    display: flex
+    height: 640px
+    flex-direction: column
+    align-items: center
+    justify-content: center
+  &__title
+    margin: 215px 0 38px 0
+    display: flex
+    font-family: Banny
+    font-size: 36px
+    line-height: 48px
+    text-align: center
+    text-transform: uppercase
+    &::after
+      @include after-plank( 53px, 0, 0, 55px, 60px, 5.11px)
+  &__subtitle
+    max-width: 560px
+    font-family: Open Sans
+    font-style: normal
+    font-weight: bold
+    font-size: 21px
+    line-height: 28px
+    display: flex
+    align-items: flex-end
+    text-align: center
+    margin: 0 0 23px 0
+  &__content
+    margin: 18px 0 0 0
+    display: flex
+  &__form-block
+    display: flex
+    flex-direction: row
+  &__input
+    width: 420px
+    height: 60px
+    background: #E5E5E5
+    border-radius: 5px
+    margin: 5px
+    border: none
+    outline: none
+    font: 15px/19px OpenSans-Regular,
+    padding: 7px 15px 5px 18px
+    &:invalid
+      border: 0.3px solid #dacaca00
+    &:valid
+      border: 2px solid yellow
+  &__message
+    width: 1280px
+    height: 120px
+    background: #E5E5E5
+    border-radius: 5px
+    margin: 5px
+    border: none
+    outline: none
+    font: 15px/19px OpenSans-Regular,
+    padding: 7px 15px 5px 18px
+  &__form-wrapper
+    display: flex
+    justify-content: space-between
+    margin: 3px 5px -6px 5px
+  &__button
+    width: 640px
+    height: 60px
+    background: #E8C300
+    border-radius: 5px
+    font-family: Open Sans
+    font-style: normal
+    font-weight: bold
+    font-size: 12px
+    line-height: 20px
+    text-transform: uppercase
+    align-items: center
+    text-align: center
+  &__info
+    display: flex
+    justify-content: center
+    font-family: Open Sans
+    font-style: normal
+    font-weight: 400
+    font-size: 12px
+    line-height: 12px
+    letter-spacing: .03em
+    color: rgba(51, 51, 51, 0.5)
+    display: flex
+    flex-direction: row
+    align-items: center
+textarea
+  resize: none
+.fas
+  width: 200px
+  margin: 0 10px 0px 30px
+.fa-envelope
+  background-image: url('/assets/images/message.svg')
+  background-repeat: no-repeat
+  width: 15px
+  height: 15px
+
+.fa-map-marker-alt
+  background-image: url('/assets/images/map-marker-alt-solid.svg')
+  background-repeat: no-repeat
+  height: 15px
+  width: 15px
+
+.fa-phone
+  background-image: url('/assets/images/phone-solid.svg')
+  background-repeat: no-repeat
+  width: 15px
+  height: 15px

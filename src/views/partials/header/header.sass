@@ -1,0 +1,266 @@
+.header
+
+  &__container
+    display: flex
+    justify-content: center
+    flex-direction: column
+    &-main
+      @media (min-width: 768px)
+        background-image: url(/assets/images/header-background.jpg)
+        background-repeat: no-repeat
+        background-size: 100%
+      @media (min-width: 1980px)
+        max-width: 1980px
+      @media(max-width: 768px) and (orientation: portrait)
+        background-image: url(/assets/images/header-bg-phone.png)
+        background-repeat: no-repeat
+        background-size: 100%
+        height: 100vmax
+        width: 100%
+        max-height: 700px
+      @media (orientation: landscape) and (max-width:768px )
+        background-image: url(/assets/images/header-bg-phone-hor.png)
+        background-repeat: no-repeat
+        background-size: 100%
+        height: 100vmax
+        width: 100%
+        max-height: 700px
+    &-navbars
+      align-items: center
+      display: flex
+      justify-content: center
+      @media (max-width:700px)
+        justify-content: space-between
+    &-navbar-menu
+      display: flex
+      padding: 10px 10px 50px 40px
+      font-family: $secFont
+      font-size: 12px
+      @media (max-width:700px)
+        display: none
+    &-logo
+      margin: 1.8vmax 0 0 18px
+      @media (max-width: 700px)
+        margin: 1.8vmax 0 0 0
+    &-logotype
+      width: 10vw
+      height: 10vw
+      @media (min-width: 1981px)
+        width: 200px
+        height: 200px
+        padding-bottom: 1vw
+      @media (max-width: 700px)
+        margin: 0 2vw 0 2vw
+        padding-bottom: 1vw
+    &-link
+      margin: 0 2.8vw 0px 2.8vw
+      @media (min-width: 1981px)
+        margin: 0px 70px 50px 70px
+      @media (max-width: 1024px)
+        margin: 0 1.5vw 0px 1.5vw
+      &-a
+        color: $white
+        &:hover
+          color: gray
+  &__fa-phone
+    @media (max-width:700px)
+      background-image: url('/assets/images/phone-solid-color.svg')
+      background-repeat: no-repeat
+
+      width: 15px
+      height: 15px
+      margin: 0 0 4px 0px
+  &__content // content-header
+    display: flex
+    justify-content: space-around
+    padding: 7.5vw 0 0 0
+    max-width: 1440px
+    place-self: center
+    @media (min-width: 1981px)
+      padding: 160px 0 0 0
+    @media (max-width: 1256px)
+      padding: 7vw 0 0 0
+    @media(max-width: 1024px)
+      padding: 0vw 0 0 0
+    @media(max-width: 500px) and (orientation: portrait)
+      flex-direction: column
+    &-title
+      display: flex
+      flex-direction: column
+      justify-content: space-around
+      margin: 0px 0px 0 0px
+      @media (min-width: 1441px)
+        padding: 0 3.5vw 0 3.5vw
+        @media (max-width: 1441px)
+          justify-content: space-evenly
+    &-info
+      &-timetable--horizontal
+        display: flex
+        align-items: flex-start
+        writing-mode: vertical-lr
+        transform: rotate(180deg)
+        width: 65px
+        font-size: $lowsize
+        font-family: $secFont
+        @media (max-width: 1024px)
+          margin-left: -35px
+        @media(orientation: portrait)
+          display: flex
+          align-items: center
+          writing-mode: unset
+          width: 175px
+          transform: rotate(0deg)
+          place-self: center
+          margin: 0 0 0 0
+          font-size: 2vw
+      &-icons
+        writing-mode: vertical-lr
+        display: flex
+        flex-direction: row
+        justify-content: space-evenly
+    &-icon
+      width: 60px
+      height: 60px
+      @media(max-width: 1440px)
+        max-width: 60px
+        max-height: 60px
+        width: 5vw
+        height: 5vw
+    &-subtitle
+      font-size: $lowsize
+      font-style: normal
+      font-weight: bold
+      font-size: 12px
+      line-height: 14px
+      letter-spacing: 0.5em
+      padding: 7px 0px 20px 10px
+      @media(max-width: 1024px)
+        padding: 3vw 0 0vw 0
+        font-size: 8px
+
+      &::after
+        @include after-plank( 150px, 0px, 0px, -100px, 60px, 5.11px)
+        @media (max-width: 1256px)
+          margin-top: 140px
+
+        @media(max-width: 1024px)
+          margin-top: 110px
+          max-width: 5vw
+          margin-left: -87px
+    &-h1-style
+      padding: 0 0 58px 0
+      font-size: 96px
+      font-family: $mainFont
+      @media(max-width: 1440px)
+        font-size: 7vw
+      @media(max-width: 1024px)
+        padding: 0vw 0 0vw 0
+    &-buttons
+      display: flex
+      justify-content: space-evenly
+      font-size: $lowsize
+      font-family: $secFont
+      padding: 0 130px 0px 130px
+      @media(max-width: 1440px)
+        padding: 0 7vw 0px 7vw
+      @media(max-width: 1024px)
+        padding: 0 7vw 0px 7vw
+      @media(orientation: portrait)
+        justify-content: space-between
+        height: 165px
+        display: flex
+        flex-direction: column
+        align-items: center
+    // &-buttons, &-title
+    //   display: block
+
+  &__title-logo-phone
+    @media (max-width:700px)
+      font-family: Banny
+      font-size: 24px
+      line-height: 48px
+      text-align: center
+      text-transform: uppercase
+    @media (min-width:701px)
+      display: none
+  &__logo-name-mob
+    display: flex
+    align-items: center
+
+  &__btn-down
+    display: flex
+    justify-content: center
+    align-content: center
+    flex-direction: row
+    padding: 83px 2px 0 0px
+    @media(max-width: 1440px)
+      padding: 4vw 0 4vw 0
+    @media(max-width: 1024px)
+      padding: 0vw 0 4vw 0
+      margin: 0 0 2vw 0
+    &-icons
+      width: 60px
+      height: 60px
+      @media(max-width: 1440px)
+        max-width: 60px
+        max-height: 60px
+        width: 5vw
+        height: 5vw
+
+  &__dropbtn1 //Dropdown Button
+    @media (max-width:700px)
+      border: none
+      cursor: pointer
+      height: 12px
+      width: 15px
+
+    //Dropdown button on hover & focus */
+
+    // &:hover, &:focus
+    //   @media (max-width:700px)
+    //     background-color: #2980B9
+
+    //The container <div> - needed to position the dropdown content
+  &__dropdown
+    @media (max-width:700px)
+      position: relative
+      display: inline-block
+    @media (min-width:701px)
+      display: none
+    &-content
+      display: none
+      // display: contents
+      position: absolute
+      background-color: #E8C300
+      // width: 85vw
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2)
+      z-index: 1
+      border: 1px solid
+      border-radius: 5px
+      // /* Links inside the dropdown */
+      &-drop-menu-right, &-drop-menu-left
+        display: flex
+    &-content a
+      @media (max-width:700px)
+        color: black
+        padding: 12px 4vw
+        text-decoration: none
+        display: block
+        text-transform: uppercase
+        font-family: Open Sans
+        font-style: normal
+        font-weight: bold
+        font-size: 16px
+    //   @media (max-width:700px)
+    //     background-color: #faf62249
+.show
+  @media (max-width:700px)
+    display: flex
+    margin: 25px 0 0 0
+    flex-direction: column
+    min-width: 325px
+    width: 75vw
+    flex-wrap: wrap
+    align-content: center
+    align-items: center
+    // Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
