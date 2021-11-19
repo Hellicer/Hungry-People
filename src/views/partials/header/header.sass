@@ -1,36 +1,34 @@
 .header
 
   &__container
-    display: flex
-    justify-content: center
-    flex-direction: column
     &-main
-      @media (min-width: 768px)
+      @media (min-width: 1024px)
         background-image: url(/assets/images/header-background.jpg)
         background-repeat: no-repeat
-        background-size: 100%
-      @media (min-width: 1980px)
-        max-width: 1980px
-      @media(max-width: 768px) and (orientation: portrait)
+        background-size: cover
+        max-width: 1440px
+        max-height: 800px
+      @media(max-width: 500px) and (orientation: portrait)
         background-image: url(/assets/images/header-bg-phone.png)
         background-repeat: no-repeat
-        background-size: 100%
-        height: 100vmax
+        background-size: cover
         width: 100%
-        max-height: 700px
-      @media (orientation: landscape) and (max-width:768px )
+        height: 100%
+      @media(min-width: 500px)
         background-image: url(/assets/images/header-bg-phone-hor.png)
         background-repeat: no-repeat
-        background-size: 100%
-        height: 100vmax
-        width: 100%
-        max-height: 700px
+        background-size: cover
+        max-width: 1440px
+        max-height: 800px
     &-navbars
       align-items: center
       display: flex
       justify-content: center
       @media (max-width:700px)
         justify-content: space-between
+      @media (max-width:500px)
+        margin: 0 0 4vh 0
+        padding: 1vh 0 0 0
     &-navbar-menu
       display: flex
       padding: 10px 10px 50px 40px
@@ -39,23 +37,39 @@
       @media (max-width:700px)
         display: none
     &-logo
-      margin: 1.8vmax 0 0 18px
-      @media (max-width: 700px)
-        margin: 1.8vmax 0 0 0
+      @media (min-width: 1024px)
+        margin: 20px 0 0px 18px
+      // @media (max-width: 700px)
+      //   margin: 1.8vmax 0 0 0
     &-logotype
-      width: 10vw
-      height: 10vw
       @media (min-width: 1981px)
-        width: 200px
-        height: 200px
-        padding-bottom: 1vw
-      @media (max-width: 700px)
-        margin: 0 2vw 0 2vw
-        padding-bottom: 1vw
+        width: 150px
+        height: 150px
+        padding: 0 15px 10px 0
+      @media (max-width: 1980px)
+        width: 8vw
+        height: 8vw
+        // padding: 0 15px 10px 0
+        margin: 1.5vmax 0 0 0px
+      @media (max-width: 1440px)
+        width: 100px
+        height: 100px
+          // padding: 0 0px 0px 15px
+      @media (max-width: 1024px)
+        width: 100px
+        height: 100px
+        padding: 0 0px 0px 15px
+      @media (max-width: 768px)
+        // margin: 0 2vw 0 2vw
+        padding: 0 5px 1vw 5px
+        margin: 0 0 0 0px
+        width: 70px
+        height: 70px
+
     &-link
-      margin: 0 2.8vw 0px 2.8vw
+      margin: 0 2.3vw 0px 2.3vw
       @media (min-width: 1981px)
-        margin: 0px 70px 50px 70px
+        margin: 0px 45px 0px 45px
       @media (max-width: 1024px)
         margin: 0 1.5vw 0px 1.5vw
       &-a
@@ -67,32 +81,42 @@
       background-image: url('/assets/images/phone-solid-color.svg')
       background-repeat: no-repeat
 
-      width: 15px
-      height: 15px
+      width: 23px
+      height: 23px
       margin: 0 0 4px 0px
   &__content // content-header
     display: flex
     justify-content: space-around
-    padding: 7.5vw 0 0 0
+    padding: 50px 0 0 0
     max-width: 1440px
     place-self: center
     @media (min-width: 1981px)
-      padding: 160px 0 0 0
+      padding: 50px 0 0 0
     @media (max-width: 1256px)
-      padding: 7vw 0 0 0
+      padding: 50px 0 0 0
     @media(max-width: 1024px)
       padding: 0vw 0 0 0
     @media(max-width: 500px) and (orientation: portrait)
       flex-direction: column
+    &-inner
+      @media(max-width: 500px)
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+
+    &-wrapper-mob
+      margin: 60px 0 60px 0
     &-title
-      display: flex
-      flex-direction: column
-      justify-content: space-around
-      margin: 0px 0px 0 0px
+      @media (max-width: 1441px)
+        justify-content: space-evenly
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        margin: 0px 0px 0 0px
       @media (min-width: 1441px)
         padding: 0 3.5vw 0 3.5vw
-        @media (max-width: 1441px)
-          justify-content: space-evenly
+      @media (max-width: 1024px)
+        justify-content: center
     &-info
       &-timetable--horizontal
         display: flex
@@ -104,28 +128,45 @@
         font-family: $secFont
         @media (max-width: 1024px)
           margin-left: -35px
-        @media(orientation: portrait)
-          display: flex
-          align-items: center
-          writing-mode: unset
-          width: 175px
-          transform: rotate(0deg)
-          place-self: center
-          margin: 0 0 0 0
-          font-size: 2vw
+        // @media(max-width: 768px)
+        //   width: 55px
+        //   font-size: 1.8vh
+        @media(max-width: 500px)
+          display: none
+      &-timetable--portrait
+        @media(min-width: 500px)
+          display: none
+        @media(max-width: 500px)
+          font-size: 3.5vw
+          font-family: $secFont
+          padding: 4vh 0 4vh 0
       &-icons
         writing-mode: vertical-lr
         display: flex
         flex-direction: row
-        justify-content: space-evenly
-    &-icon
-      width: 60px
-      height: 60px
-      @media(max-width: 1440px)
-        max-width: 60px
-        max-height: 60px
-        width: 5vw
-        height: 5vw
+        justify-content: space-between
+        @media(max-width: 500px)
+          display: flex
+          flex-direction: column
+          justify-content: space-between
+          padding: 0vw 30px 4vw 30px
+          margin: 14vw 0 5vw 0
+
+        &-icon-style
+
+          width: 60px
+          height: 60px
+        //   // @media(max-width: 1440px)
+          //   max-width: 60px
+          //   max-height: 60px
+          //   width: 5vw
+          //   height: 5vw
+          // @media(max-width: 768px)
+          //   max-width: 30px
+          //   max-height: 30px
+          //   width: 5vw
+          //   height: 5vw
+
     &-subtitle
       font-size: $lowsize
       font-style: normal
@@ -137,16 +178,28 @@
       @media(max-width: 1024px)
         padding: 3vw 0 0vw 0
         font-size: 8px
-
+      @media (max-width: 768px)
+        padding: 3vw 0 0vw 0
+        font-size: 8px
+      @media (max-width: 500px)
+        font-size: 3vw
+        font-weight: 600
+        padding: 3vw 0 1vw 0
       &::after
         @include after-plank( 150px, 0px, 0px, -100px, 60px, 5.11px)
         @media (max-width: 1256px)
           margin-top: 140px
-
         @media(max-width: 1024px)
-          margin-top: 110px
-          max-width: 5vw
-          margin-left: -87px
+          margin-top: 9vw
+          max-width: 10vw
+          margin-left: -68px
+        @media(max-width: 768px)
+          margin-top: 10vw
+          max-width: 10vw
+          margin-left: -68px
+        @media(max-width: 500px)
+          display: none
+
     &-h1-style
       padding: 0 0 58px 0
       font-size: 96px
@@ -155,6 +208,12 @@
         font-size: 7vw
       @media(max-width: 1024px)
         padding: 0vw 0 0vw 0
+      @media (max-width: 768px)
+        font-size: 7vw
+        padding: 1vh 0 1vh 0
+      @media (max-width: 500px)
+        font-size: 11vw
+        padding: 1vh 0 1vh 0
     &-buttons
       display: flex
       justify-content: space-evenly
@@ -164,55 +223,76 @@
       @media(max-width: 1440px)
         padding: 0 7vw 0px 7vw
       @media(max-width: 1024px)
-        padding: 0 7vw 0px 7vw
-      @media(orientation: portrait)
-        justify-content: space-between
+        padding: 2vw 3vw 2vw 3vw
+      @media(max-width: 500px)
+        // justify-content: space-between
         height: 165px
         display: flex
         flex-direction: column
         align-items: center
-    // &-buttons, &-title
-    //   display: block
-
+        justify-content: space-between
+        // padding: 5vh 0 5vh 0
+        // margin: 60px 0 40px 0
+        // margin: 9vh 0 6vh 0
+    &-button
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 200px
+      height: 60px
+      border: solid 1px
+      border-radius: 5px
+      font-size: $lowsize
+      @media(max-width: 1024px)
+        width: 170px
+        height: 66px
+        border-radius: 15px
+      // @media(max-width: 768px)
+      //   width: 18vw
+      //   height: 5vw
+      @media(max-width: 500px)
+        width: 250px
+        height: 66px
+        border-radius: 15px
+        font-size: 16px
   &__title-logo-phone
     @media (max-width:700px)
       font-family: Banny
-      font-size: 24px
+      font-size: 6vw
       line-height: 48px
       text-align: center
       text-transform: uppercase
+      font-weight: bold
     @media (min-width:701px)
       display: none
   &__logo-name-mob
     display: flex
     align-items: center
-
   &__btn-down
     display: flex
     justify-content: center
     align-content: center
     flex-direction: row
-    padding: 83px 2px 0 0px
+    padding: 83px 2px 82px 0px
     @media(max-width: 1440px)
       padding: 4vw 0 4vw 0
     @media(max-width: 1024px)
       padding: 0vw 0 4vw 0
       margin: 0 0 2vw 0
+    @media(max-width: 500px)
+      padding: 0vw 0 0vw 0
+      margin: 3vh 0 3vh 0
     &-icons
-      width: 60px
-      height: 60px
-      @media(max-width: 1440px)
-        max-width: 60px
-        max-height: 60px
-        width: 5vw
-        height: 5vw
+      @media(max-width: 1024px)
+        width: 8vmax
+        height: 8vmax
 
   &__dropbtn1 //Dropdown Button
     @media (max-width:700px)
       border: none
       cursor: pointer
-      height: 12px
-      width: 15px
+      height: 25px
+      width: 25px
 
     //Dropdown button on hover & focus */
 
@@ -256,7 +336,7 @@
 .show
   @media (max-width:700px)
     display: flex
-    margin: 25px 0 0 0
+    margin: 25px 3vw 0 3vw
     flex-direction: column
     min-width: 325px
     width: 75vw

@@ -48,10 +48,7 @@
       people
     </div>
   </div>
-
-
   <i class="header__fa-phone"> </i>
-
 
   <div class="header__container-navbars-right text--white">
     <ul class="header__container-navbar-menu text--upper">
@@ -63,55 +60,62 @@
   </div>
 </div>
 
-<div class="header__inner">
+<div class="header__content-inner">
   <div class="header__content">
-
     <h6 class="header__content-info-timetable--horizontal text--white text">
       Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
     </h6>
-
     <div class="header__content-title text">
       <h6 class="header__content-subtitle text  text--white
   text--upper">
         restaurant
       </h6>
-
       <h1 class="header__content-h1-style text--upper text--white">
         hungry people
       </h1>
+
+      <h6 class="header__content-info-timetable--portrait text--white text">
+        Mon - Fri: 8PM - 10PM, Sat - Sun: 8PM - 3AM
+      </h6>
+
+      <div class="header__content-buttons">
+        @@include('../../components/buttons/button.html',{
+        "tag": "a",
+        "className": "header__content",
+        "text": "BOOK TABLE",
+        "href": "href=",
+        "url":"#booking",
+        "modifiler":"colored",
+        "2className": "text--white",
+        "3className": "btn",
+        })
+        @@include('../../components/buttons/button.html',{
+        "tag": "a",
+        "className": "header__content",
+        "text": "EXPLORE",
+        "href": "href=",
+        "url":"#contact",
+        "modifier":"simple",
+        "2className": "text--white",
+        "3className": "btn",
+        })
+      </div>
     </div>
-    <div class="header__content-buttons">
-      @@include('../../components/buttons/button.html',{
-      "tag": "a",
-      "className": "header",
-      "text": "BOOK TABLE",
-      "href": "href=",
-      "url":"#booking",
-      "modifiler":"colored",
-      "2className": "text--white",
-      "3className": "btn",
-      })
-      @@include('../../components/buttons/button.html',{
-      "tag": "a",
-      "className": "header",
-      "text": "EXPLORE",
-      "href": "href=",
-      "url":"#contact",
-      "modifier":"simple",
-      "2className": "text--white",
-      "3className": "btn",
-      })
-    </div>
+
     <div class="header__content-info-icons">
 
-      <a href="https://ru-ru.facebook.com/PaulMcCartney" class="header__content-info-icons">
-        <img src="assets/images/facebook.svg" alt="facebook" srcset="desktop" class="header__content-icon">
+      <a href="https://ru-ru.facebook.com/PaulMcCartney" class="header__content-info-icons-icon">
+
+        <img src="assets/images/facebook.svg" alt="facebook" srcset="desktop" class="header__content-info-icons-icon-style">
       </a>
-      <a href="https://twitter.com/?lang=ru" class="header__content-info-icons">
-        <img src="assets/images/twitter.svg" alt="twitter" srcset="desktop" class="header__content-icon">
+      <a href="https://twitter.com/?lang=ru" class="header__content-info-icons-icon">
+
+        <img src="assets/images/twitter.svg" alt="twitter" srcset="desktop" class="header__content-info-icons-icon-style">
       </a>
-      <a href="https://www.instagram.com/" class="header__content-info-icons">
-        <img src="assets/images/instagram.svg" alt="instagram" srcset="desktop" class="header__content-icon">
+      <a href="https://www.instagram.com/" class="header__content-info-icons-icon">
+
+        <img src="assets/images/instagram.svg" alt="instagram" srcset="desktop" class="header__content-info-icons-icon-style">
+
       </a>
     </div>
 
