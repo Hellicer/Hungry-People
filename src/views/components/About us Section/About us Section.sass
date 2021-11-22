@@ -1,35 +1,100 @@
 .about-us
+  // &__wrapper
+  //   display: flex
+  //   align-items: center
+  //   flex-direction: row
+  //   @media (max-width: 1024px)
+  //     flex-direction: column
   &__container
-    @include option_block
-    justify-content: space-around
-    height: 675px
-    align-content: center
-    flex-wrap: wrap
-  &__title
-    padding: 0px 0px 13px 140px
-    font: 36px/48px Banny,
-    &::after
-      @include after-plank( 54px, 0px, 0px, -117px, 60px, 5.11px)
-  &__sub-title
-    font: bold 18px/28px 'OpenSansBold', sans-serif
-    font-weight: 700
-    padding: 12px 0px 12px 0px
-    margin: 0px 0px 0px 65px
-    width: 600px
-  &__text
-    font: 15px/24px OpenSans-Regular,sans-serif
-    margin: 5px 0 0px 62px
-    padding: 0px 10px 0px 10px
-    width: 599px
-  &__content-text
     display: flex
     justify-content: center
     flex-direction: column
-    width: 600px
+    align-content: stretch
+    flex-wrap: wrap
+    @media(min-width: 1024px)
+      height: 675px
+      max-width: 1280px
+    @media(max-width: 1024px)
+      display: flex
+      flex-direction: column
+      align-items: center
+      flex-wrap: nowrap
+  &__content
+    display: flex
+    justify-content: space-around
+    flex-direction: column
     font-size: $mediumsize
+    max-width: 610px
+    min-height: 245px
+    min-height: 0px
+    padding: 0 0vw 0px 2vw
+    @media (max-width: 1024px)
+      padding: 0
+      max-width: 642px
+      width: auto
+      height: 40px
+      margin: 50px 0 0vw 0
+    &-mob
+      display: none
+      @media (max-width: 1024px)
+        display: flex
+        flex-direction: column
+        width: 50vw
+        min-width: 290px
+        min-height: 170px
+        justify-content: space-between
+        // padding: 0 40px 0 40px
     // margin: 0 0px 30px 55px
-    &::after
-      @include after-frame(0px, 0px, 0px, 1075px, 250px, 250px)
+    &-title
+      // padding: 0px 0px 13px 140px
+      font: 36px/48px Banny,
+      height: 65px
+      &::after
+        @include after-plank(54px, 0px, 0px, -117px, 60px, 5.11px)
+        @media (max-width: 500px)
+          @include after-plank(44px, 0px, 0px, -117px, 60px, 5.11px)
+    &-subtitle
+      font: bold 18px/28px 'OpenSansBold', sans-serif
+      font-weight: 700
+      min-height: 50px
+      @media (max-width: 1024px)
+        margin: 0 0 20px 0
+    &-text
+      font: 15px/24px OpenSans-Regular,sans-serif
+      min-height: 90px
+      @media (max-width: 1024px)
 
-  &__image
-    padding: 3px 117px 0px 0px
+    &-image
+      display: flex
+      justify-content: center
+      align-content: center
+      flex-direction: column
+      align-content: flex-start
+      align-items: flex-end
+      flex-wrap: wrap
+      max-width: 642px
+      width: auto
+      @media(max-width: 1024px)
+        width: 50vw
+      @media(max-width: 500px)
+        width: 46vw
+      @media(max-width: 360px)
+        width: 44vw
+      &::after
+        @include after-frame(0px, 0px, 0px, 0px, 250px, 250px)
+        @media(max-width: 1024px)
+          @include after-frame(0px, 0px, 0px, 0px, 25vw, 25vw)
+        @media(max-width: 768px)
+          @include after-frame(0px,0vw, 0px, 0px, 25vw, 25vw)
+          border: 15px solid #e8c300
+      &-picture
+        float: left
+        width: 575px
+        height: 575px
+        margin: 0px 0 0 -50px
+        @media(max-width: 1150px)
+          height: 475px
+          width: 475px
+        @media(max-width: 1024px)
+          height: 50vw
+          width: 50vw
